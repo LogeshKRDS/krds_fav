@@ -4,11 +4,11 @@
   "description": "App to Maintain KRDS Fav Links",
   "main": "app.js",
   "engines": {
-      "node": "4.1.1"
+      "node": "0.10.32"
   },
   "dependencies": {
   "express": "~4.13.4",
-	"express-session": "~0.5.2",
+	"express3-handlebars": "~0.5.2",
   "body-parser": "~1.14.2",
 	"path": "~0.12.7",
 	"mongoose": "~4.3.7"
