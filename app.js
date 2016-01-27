@@ -12,3 +12,4 @@ mongoose.connect('mongodb://vishnu:vishnu@ds043917.mongolab.com:43917/heroku_brn
 require('./routes')(app);
 var port    =   process.env.PORT || 3000;
 var server = app.listen(port);
+console.log('listening on', port, process.env.PORT);
