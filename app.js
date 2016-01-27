@@ -8,6 +8,6 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.engine('hbs', expressHbs({extname:'hbs', defaultLayout:'main.hbs'}));
 app.set('view engine', 'hbs');
-mongoose.connect('mongodb://localhost/krds_fav');
+mongoose.connect('mongodb://vishnu:vishnu@ds043917.mongolab.com:43917/heroku_brncjw7n');
 require('./routes')(app);
 var server = app.listen(8081);
