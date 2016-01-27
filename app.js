@@ -1,0 +1,13 @@
+var express     =   require('express'), mongoose = require("mongoose"), path = require('path');
+var expressHbs  =   require('express3-handlebars');
+var bodyParser  =   require("body-parser");
+var app         =   express();
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({"extended" : false}));
+app.set('views', path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, 'public')));
+app.engine('hbs', expressHbs({extname:'hbs', defaultLayout:'main.hbs'}));
+app.set('view engine', 'hbs');
+mongoose.connect('mongodb://localhost/krds_fav');
+require('./routes')(app);
+var server = app.listen(8081);

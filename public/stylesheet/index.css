@@ -1,0 +1,39 @@
+.block {
+    min-height: 200px;
+}
+
+.icon {
+    margin: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+.linkContainer:hover .icon {
+    display: block;
+}
+
+.error {
+    visibility: hidden;
+    color: red;
+    text-align: center;
+    height: 20px;
+}
+html, body, .container-table {
+    height: 100%;
+    width: 100%;
+}
+.container-table {
+    display: table;
+}
+
+.vertical-center-row {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.alert {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    bottom: 10px;
+}

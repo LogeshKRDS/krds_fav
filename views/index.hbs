@@ -1,0 +1,48 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">KRDS FAV</h1>
+            <button id="jsBtnAdd" class="btn btn-primary jsBtnAdd pull-right" data-content_type="{{name}}"/><span class="glyphicon glyphicon-plus-sign"></span></button>
+        </div>
+    </div>
+    <div class="row">
+    {{#each contents}}
+        <div class="col-md-3">
+            <div class="well block">
+                <div class="clearfix">
+                    <h4 class="pull-left">{{name}}</h4>
+                    <button class="btn btn-primary pull-right jsBtnAdd" data-content_type="{{name}}"/><span class="glyphicon glyphicon-plus-sign"></span></button>
+                </div>
+                {{#websites}}
+                    <p class="linkContainer" data-content_type="{{../name}}" data-name="{{name}}" data-address="{{address}}" data-id="{{../_id}}" data-index="{{@index}}">
+                        <a href="{{address}}" target="_blank" class=""><span class="glyphicon glyphicon-globe"></span> {{name}}</a>
+                        <span class="icon jsDelete glyphicon glyphicon-trash pull-right" style="color: red;" title="Delete"></span>
+                        <span class="icon jsEdit glyphicon glyphicon-pencil pull-right" style="color: blue;" title="Edit"></span>
+                    </p>
+                {{/websites}}
+            </div>
+        </div>
+    {{/each}}
+    </div>
+</div>
+<div class="alert alert-success" id="alert_info" role="alert" style="display:none;"></div>
+<div id="form_container">
+    <div class="modal fade" id="form_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel"><span id="user_action">Add</span> Fav</h4>
+          </div>
+          <div class="modal-body">
+            {{> form this}}
+          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="btn_submit">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/javascript/app/index.js"></script>

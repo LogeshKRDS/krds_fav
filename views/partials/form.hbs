@@ -1,0 +1,32 @@
+<form>
+    <div class="form-group row">
+        <label for="content_type" class="col-sm-4 form-control-label">Type</label>
+        <div class="col-sm-8">
+            <select id="content_type" class="form-control">
+                {{#content_types}}
+                    <option value="{{this}}">{{this}}</option>
+                {{/content_types}}
+            </select>
+        </div>
+    </div>
+    <div class="form-group row" id="container_custom" style="display:none;">
+        <label for="custom_type" class="col-sm-4 form-control-label">Name</label>
+        <div class="col-sm-8">
+            <input class="form-control" type="text" id="custom_name" name="custom_name" placeholder="Name"/>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="website_name" class="col-sm-4 form-control-label">Website Name</label>
+        <div class="col-sm-8">
+            <input type="text" id="website_name" class="form-control" name="website_name" placeholder="Website Name"/>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="website_addr" class="col-sm-4 form-control-label">Website URI</label>
+        <div class="col-sm-8">
+            <input type="text" id="website_addr" class="form-control" name="website_addr" placeholder="Website URI"/>
+        </div>
+    </div>
+
+  <p class="error" id="js_error"></p>
+</form>
