@@ -1,6 +1,6 @@
 {
   "name": "KRDS FAV",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "App to Maintain KRDS Fav Links",
   "main": "app.js",
   "dependencies": {
